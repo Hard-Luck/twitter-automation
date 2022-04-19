@@ -12,19 +12,19 @@ app = Flask(__name__)
 scheduler = BackgroundScheduler()
 scheduler.add_job(
     func=tweet.like_tweets,
-    start_date="2022-04-19 20:00:00",
+    start_date="2022-04-19 20:30:00",
     trigger="interval",
     minutes=15,
 )
 scheduler.add_job(
     func=tweet.tweet_quote,
-    start_date="2022-04-19 20:05:00",
+    start_date="2022-04-19 20:35:00",
     trigger="interval",
     hours=12,
 )
 scheduler.add_job(
     func=tweet.tweet_stats,
-    start_date="2022-04-19 20:10:00",
+    start_date="2022-04-19 20:50:00",
     trigger="interval",
     hours=2,
 )
